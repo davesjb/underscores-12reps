@@ -1,0 +1,256 @@
+/* ======================================
+
+	HERO BANNER
+
+ ========================================= */
+
+ .reps-banner {
+ 	position: relative;
+ 	overflow: hidden;
+ }
+
+ .blue-overlay {
+ 	background: rgba(10, 43, 62, 0.7);
+ 	width: 100%;
+ 	height: 100%;
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	z-index: 2;
+ }
+
+ .page-template-landing .reps-banner {
+ 	min-height: 90vh;
+ 	@include bp(800px){
+ 		min-height: 70vh;
+	}
+
+ 	.hero-image {
+ 		width: 100%;
+	 	min-height: 240px;
+	 	height: 100%;
+	 	background-size: cover;
+	 	position: absolute;
+	 	top: 0;
+	 	left: 0;
+	 	@media screen and (max-width: 480px) {
+	 		// background-image: url(images/homepage-header-480.jpg);
+	 		background-position: 7% 0%;
+	 		min-height: 240px;
+	 	}
+	 	@media screen and (max-width: 800px) and (min-width: 481px) {
+	 		// background-image: url(images/homepage-header-800.jpg);
+	 		background: rgba(10, 43, 62, 0.7);
+	 	}
+	 	@include bp(481px){
+	 		background-position: 40% 0;
+	 	}
+	 	@include bp(640px){
+	 		background-position: 20% 0;
+	 	}
+	 	@include bp(800px){
+	 		background-position: center 30%;
+	 	}
+	 	@media screen and (max-width: 1400px) and (min-width: 801px) {
+	 		// background-image: url(images/homepage-header-1440.jpg);
+	 		background: rgba(10, 43, 62, 0.7);
+	 		min-height: 530px;
+	 		// position: fixed;
+	 		top: 0;
+	 		left: 0;
+	 		animation: scaleHero 20s infinite alternate;
+	 		
+	 	}
+	 	@include bp(1401px){ 
+	 		// background-image: url(images/homepage-header-1920.jpg);
+	 		min-height: 727px;
+	 		// position: fixed;
+	 		top: 0;
+	 		left: 0;
+	 		animation: scaleHero 20s infinite alternate;
+	 		.remove-hero & {
+	 			position: absolute;
+	 		}
+	 	}
+	 }
+}
+
+.page-template-about, .page-template-prices, .page-template-services, 
+.page-template-contact, .page-template-default, .post-template-default  {
+	.reps-banner {
+	 	min-height: 60vh;
+
+	 	.hero-image {
+	 		width: 100%;
+		 	min-height: 240px;
+		 	height: 100%;
+		 	background-size: cover;
+		 	position: absolute;
+		 	top: 0;
+		 	left: 0;
+		 	@media screen and (max-width: 480px) {
+		 		background-image: url(images/about-header-480.jpg);
+		 		background-position: 7% 0%;
+		 		min-height: 240px;
+		 	}
+		 	@media screen and (max-width: 800px) and (min-width: 481px) {
+		 		background-image: url(images/about-header-800.jpg);
+		 	}
+		 	@include bp(481px){
+		 		background-position: 40% 0;
+		 	}
+		 	@include bp(640px){
+		 		background-position: 20% 0;
+		 	}
+		 	@include bp(800px){
+		 		background-position: center 30%;
+		 	}
+		 	@media screen and (max-width: 1400px) and (min-width: 801px) {
+		 		background-image: url(images/about-header-1440.jpg);
+		 		min-height: 230px;
+		 		position: fixed;
+		 		top: 0;
+		 		left: 0;
+		 		animation: scaleHero 20s infinite alternate;
+		 	}
+		 	@include bp(1401px){ 
+		 		background-image: url(images/about-header-1920.jpg);
+		 		min-height: 427px;
+		 		position: fixed;
+		 		top: 0;
+		 		left: 0;
+		 		animation: scaleHero 20s infinite alternate;
+		 	}
+		}
+	}
+}
+
+.remove-hero {
+	.reps-banner {
+	 	.hero-image {
+		 	@media screen and (max-width: 1400px) and (min-width: 801px) {
+		 		position: absolute;
+		 	}
+		 	@include bp(1401px){ 
+		 		position: absolute;
+		 	}
+		 }
+	}
+}
+
+@keyframes scaleHero {
+  0% {
+    transform: scale(1.2);
+    
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+// Lazy load
+.page-template-landing.sticky-active .section-contact {
+ 	background-image: url(images/north-london.jpg);
+ 	background-size: cover;
+ 	background-position: center;
+ 	padding-bottom: 185px;
+}
+
+body {
+	&:not(.page-template-landing){
+		/* Not */
+		.section-contact {
+		 	background-image: url(images/north-london.jpg);
+		 	background-size: cover;
+		 	background-position: center;
+		 	padding-bottom: 185px;
+		}
+	}
+}
+
+.hero-banner {
+	background-color: rgba(255, 0, 0, 0.0);
+	width: 90%;
+	float: left;
+	min-height: 270px;
+	top: 50%;
+	position: absolute;
+	transform: translateY(-50%);
+	h1 {
+		color: $white;
+		text-align: left;
+	}
+	p {
+		color: $white;
+		font-size: 2.8rem;
+		line-height: 1.2;
+		text-align: left;
+	}
+	@include bp(480px){
+		width: 70%;
+		height: 170px;
+		max-width: 558px;
+		p {
+			font-size: 3.4rem;
+			line-height: 1.4;
+		}
+	}
+	@include bp(800px){
+		width: 100%;
+		height: 210px;
+		max-width: 558px;
+	}
+}
+
+#logo-12reps {
+	background-image: url(images/logo-white-12reps.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 0%; 
+	max-width: 57px;
+	height: 129px;
+	position: absolute;
+	top: 10px;
+	left: 30px;
+    z-index: 3;
+    display: none;
+    animation: logoSizeUp 2.5s;
+    animation-fill-mode: forwards;
+    @media screen and (min-width: 320px) and (min-height: 500px) {
+    	display: block;
+    }
+    @media screen and (min-width: 370px) and (min-height: 720px) {
+    	top: 70px;
+    	left: 50%;
+    	transform: translate(-50%);
+    }
+    @media screen and (min-width: 450px) and (min-height: 800px){
+    	max-width: 129px;
+    }
+    @media screen and (min-height: 890px) {
+    	top: 154px;
+    }
+    @media screen and (min-width: 720px) {
+    	top: 30px;
+    	left: 30px;
+    	transform: none;
+    }
+    @media screen and (min-width: 720px) and (max-width: 790px) {
+    	max-width: 80px;
+    }
+    @media screen and (min-width: 790px){
+    	max-width: 129px;
+    }
+}
+
+@keyframes logoSizeUp {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}

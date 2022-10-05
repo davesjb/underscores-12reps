@@ -1,0 +1,303 @@
+/* ======================================
+
+	THEME
+
+ ========================================= */
+
+ #transcroller-body {
+ 	background-color: $white;
+ }
+
+.floating-box {
+	width: 100%;
+	float: left;
+	background-color: $blue;
+	padding: 30px;
+	margin-bottom: 30px;
+	h2, h3, p {
+		color: $white;
+	}
+}
+
+.opacitised {
+	opacity: .8;
+}
+
+
+/* Text link */
+.cookie-notice-container {
+	background-color: #082b3f!important;
+	position: relative;
+	a {
+		color: #FFF !important;
+	}
+}
+
+.cn-button.bootstrap {
+	background: #fff !important;
+	color: #000 !important;
+	&:hover {
+		background: #ccc !important;
+	}
+}
+
+/*#cookie-notice .cn-button {
+	background-color: white !important;
+}*/
+
+#cn-accept-cookie {
+	&:before, &:after {
+		content: "";
+		display: none;
+	}
+}
+
+/* Text link */
+.cc_container {
+	background-color: none;
+	position: relative;
+	a {
+		color: #FFF !important;
+	}
+}
+
+#cookie-notice {
+	background: rgba(10, 43, 62, 0.8) !important;
+}
+
+.cta {
+	p {
+		font-size: 2.4rem;
+		&.smaller-text {
+			font-size: 2rem;
+		}
+	}
+}
+
+/*.svg-outline-fill {
+	animation: fillanim 1s cubic-bezier(.17, .67, .54, .99);
+}
+
+@keyframes fillanim {
+	0% {fill: none;}
+	100% {fill:green;}
+}*/
+
+body {
+ 	&:not(.page-template-landing){ 	
+		.title-container .button {
+			display: none;
+		}
+	}
+}
+
+
+.kettle-svg {
+	width: 90px;
+}
+
+.clipboard-svg {
+	width: 90px;
+}
+
+.hr-monitor-svg {
+	width: 90px;
+}
+
+.handshake-svg {
+	width: 90px;
+}
+
+/*.animating-logos {
+	stroke-dasharray: 860;
+	stroke-dashoffset: 0;
+	animation: 
+    logoStroke 1.75s linear backwards,
+    logoStrokeFill 0.75s cubic-bezier(0.445, 0.050, 0.550, 0.950) 2s backwards;
+}
+
+.animating-logos-2 {
+	stroke-dasharray: 860;
+	stroke-dashoffset: 0;
+	animation: 
+    logoStroke 1.75s linear backwards,
+    logoStrokeFill 0.75s cubic-bezier(0.445, 0.050, 0.550, 0.950) 2s backwards;
+}*/
+
+section.in-view {
+
+	.animating-logos {
+		stroke-dasharray: 860;
+		stroke-dashoffset: 560;
+		animation: 
+	    logoStroke 1.75s linear forwards,
+	    logoStrokeFill 0.75s cubic-bezier(0.445, 0.050, 0.550, 0.950) 2s forwards;
+	}
+
+	.animating-logos-2 {
+		stroke-dasharray: 860;
+		stroke-dashoffset: 560;
+		animation: 
+	    logoStroke 1.75s linear forwards,
+	    logoStrokeFill 0.75s cubic-bezier(0.445, 0.050, 0.550, 0.950) 2s forwards;
+	}
+}
+
+#outer_thick_stroke {
+	stroke-dasharray: 560;
+	stroke-dashoffset: 560;
+	animation: 
+    logoStroke 1.75s linear forwards,
+    logoStrokeFill 0.75s cubic-bezier(0.445, 0.050, 0.550, 0.950) 2s forwards;
+}
+
+@keyframes logoStroke {
+	from {
+	  stroke-dashoffset: 800;
+	}
+
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes logoStrokeFill {
+  to {
+    stroke: #E7404A;
+    fill: #E7404A;
+  }
+}
+
+#stroke_letters{
+	stroke-dasharray: 560;
+	stroke-dashoffset: 560;
+	animation: 
+    logoInnerStroke 1.75s linear forwards,
+    logoInnerStrokeFill 0.75s cubic-bezier(0.445, 0.050, 0.550, 0.950) 2s forwards;
+}
+
+@keyframes logoInnerStroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes logoInnerStrokeFill {
+  to {
+    stroke: #FFF;
+    fill: #FFF;
+  }
+}
+
+@keyframes animateLine {
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes animateLineOut {
+	0% {
+		width: 0%;
+	}
+	30% {
+		width: 10%;
+	}
+	100% {
+		width: 40%;
+	}
+}
+
+.img-dave-beckett-trainer {
+	background-image: url(images/dave-beckett-personal-trainer.jpg);
+}
+
+.img-dave-pray {
+	background-image: url(images/dave-beckett-personal-trainer-2.jpg);
+}
+
+//Lazy load from sticky
+
+.img-talk-jon {
+	background-image: url(images/talk-jon-680.jpg);
+}
+
+.img-sunrise {
+	background-image: url(images/sunrise-680.jpg);
+}
+
+.img-ropes {
+	background-image: url(images/ropes.jpg);
+}
+
+.img-deadliftk {
+	background-image: url(images/deadliftk.jpg);
+}
+
+.img-gym-three {
+	background-image: url(images/gym-three.jpg);
+}
+
+.img-plyo {
+	background-image: url(images/plyo.jpg);
+}
+
+.img-stretches {
+	background-image: url(images/stretches.jpg);
+}
+
+.img-mud2 {
+	background-image: url(images/mud2-680.jpg);
+}
+
+.img-refer {
+	background-image: url(images/refer.jpg);
+}
+
+.img-hanbacksquat {
+	background-image: url(images/hanbacksquat.jpg);
+}
+
+.testimonial-quote {
+	width: 100%;
+	.t-name {
+		font-style: italic;
+	}
+	@include bp(400px){ 
+		&:before {
+			content: "\201C";
+			font-family: $title-font;
+			position: absolute;
+			top: 40px;
+			left: 40px;
+		    color: $blue;
+		    font-size: 6.6rem;
+		}
+		&:after {
+			content: "\201D";
+			font-family: $title-font;
+			position: absolute;
+			bottom: 40px;
+			right: 40px;
+			color: $blue;
+			font-size: 6.6rem;
+		}
+	}
+}
+
+.page-template-landing .testimonial-quote {
+	max-width: 590px;
+	display: block;
+	margin: 0 auto;
+	padding: 40px;
+	position: relative;
+	&:before {
+		content: "\201C";
+		top: 20px;
+	    left: 0;
+	}
+	&:after {
+		content: "\201D";
+		bottom: 50px;
+		right: 0;
+	}
+}

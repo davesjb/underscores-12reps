@@ -1,0 +1,97 @@
+/* ======================================
+
+Author       Dave Beckett 
+             webgenesis.co.uk 
+Built        Apr 2018
+
+========================================= */
+
+/* DO NOT DELETE - This is used by mixins to determine urls paths
+and turn off some dev mixins like 'outline'  */
+$isProd: true;
+
+/* Global Breakpoints */
+$screenXS: 480px;
+$screenS: 768px;
+$screenM: 992px;
+$screenL: 1024px;
+$screenXL: 1400px;
+
+/* Reusables */
+$vertical-spacing-small: 45px;
+$vertical-spacing-large: 45px;
+$surround-spacing-small: 25px;
+$surround-padding-large: 50px;
+
+$text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
+
+/* Animation timing */
+$animation-duration: 0.3s;
+$animation-duration-long: 1s;
+
+/* Container Widths */
+$wide-screen-limit: 5000px;
+$container-width-header: 1240px;
+$container-width: 1240px;
+
+/* z-index */
+$base-index: 0;
+$z-one: 1;
+$z-two: 2;
+$z-three: 3;
+$z-nav: 100;
+$z-sticky: 110;
+$z-lightbox: 120;
+$z-burger: 130;
+
+/* 12Reps main brand colours */
+// 1 Ripple light blue
+$light-blue: #C4E0E6;
+// 2 Crush red
+$red: #E7404A;
+// 3 Sea floor turquoise blue, 
+$turquoise: #009FB1;
+// 4 Cyprus dark blue.
+$blue: #0A2B3E;
+$dark-blue: $blue;
+$turq: $turquoise;
+
+/* 12Reps secondary brand colours */
+
+$brown: #651519;
+$light-grey-box: #F5F2F2;
+$opacity-80-color: #e9646c;
+
+/* 12Reps nav colours */
+$nav-grey: #808498;
+
+$nav-black: #231f20;
+
+/* Standard Colours */
+
+$hover: $red;
+$dark-grey: #676769;
+$light-grey: #989696;
+$lighter-grey: #eceaea;
+$grey: #666;
+$error: #ee0000;
+$white: #FFF;
+$off-white: #F9F9F9;
+$black: #000;
+
+/* Assigned Colours */
+$primary-color: $blue;
+$secondary-color: $red;
+$light-text: $white;
+$dark-text: $black;
+$bullet: $primary-color;
+$button-lighter: $primary-color;
+$button: $secondary-color;
+
+/* Fonts */
+$title-font: 'Teko', Verdana, Arial, Helvetica, sans-serif;
+$body-font: 'Maven Pro', Verdana, Arial, Helvetica, sans-serif;
+$menu-text: $body-font;
+
+
+

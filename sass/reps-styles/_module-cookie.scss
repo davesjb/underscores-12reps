@@ -1,0 +1,60 @@
+/* ======================================
+
+	COOKIE CONSENT
+
+ ========================================= */
+
+	/* Text link */
+	.cookie-notice-container {
+		background-color: rgba(0, 0, 0, 0.3) !important;
+		position: relative;
+		a {
+			color: #FFF !important;
+		}
+	}
+
+	#cn-accept-cookie {
+		background-color: red;
+	}
+	
+	/* Text link */
+	.cc_container {
+		background-color: rgba(0, 0, 0, 0.3) !important;
+		position: relative;
+		a {
+			color: #FFF !important;
+		}
+	}
+
+
+	/* Close button */
+	a.cc_btn {
+		background: $black !important;
+		color: $white !important;
+		margin-top: 1%;
+		float: left !important;
+		display: block !important;
+		width: 100% !important;
+		margin-left: 0 !important;
+		&:hover {
+			background: $hover !important;
+		}
+		@include bp(768px){
+			margin: auto;
+			float: right !important;
+			margin-left: 10px !important;
+		}
+	}
+
+	.cc_message {
+		color: #FFF;
+		max-width: 100%;
+		width: 100%;
+		display: inline-block !important;
+		line-height: 1.5;
+		margin-top: 9px !important;
+		@include bp(768px){
+			display: block !important;
+			margin-top: 0px !important;
+		}
+	}

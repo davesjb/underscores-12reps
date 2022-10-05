@@ -1,0 +1,108 @@
+/* ======================================
+
+	CONTACT MODULE
+
+ ========================================= */
+
+ .get-in-touch, .stay-in-the-loop {
+ 	
+ 	p {
+ 		margin-bottom: 5px;
+ 		label {
+ 			line-height: 2;
+ 		}
+ 	}
+ 	a {
+ 		color: $white;
+ 		&:hover {
+ 			text-decoration: none;
+ 		}
+ 	}
+ 	#message {
+ 		width: 100%; 
+ 		resize: none;
+ 	}
+ 	.checkbox-474 {
+ 		margin: 0 4px 0px 0;
+ 	}
+ 	.consent {
+ 		font-size: 1.4rem;
+ 	}
+ 	span.wpcf7-list-item {
+ 		margin: 0;
+ 	}
+ 	input[type="text"]{
+ 		width: 100%;
+ 		padding: 5px;
+ 		font-size: 1.6rem;
+ 	}
+ 	input[type="email"]{
+ 		width: 100%;
+ 		padding: 5px;
+ 		font-size: 1.6rem;
+ 	}
+
+ 	.wpcf7-textarea {
+ 		font-size: 1.6rem;
+ 	}
+
+ 	input[type="submit" i]{
+ 		background-color: $red;
+ 		border: none;
+ 		color: $white;
+ 		text-transform: uppercase;
+ 		width: 145px;
+ 		height: 38px;
+ 		float: right;
+ 		padding: 5px;
+ 		font-size: 1.6rem;
+ 		&:hover {
+ 			color: $red;
+ 			background-color: $white;
+ 			transition: .5s ease-out all;
+ 			cursor: pointer;
+ 		}
+ 	}
+ 	.errors {
+ 		padding-left: 0;
+ 		li {
+ 			font-size: 1.2rem;
+ 			color: $red;
+ 			&:after {
+ 				content: "";
+ 				display: none;
+ 			}
+ 		}
+ 	}
+ 	.wpcf7-validation-errors, .wpcf7-mail-sent-ok {
+ 		border: solid 2px #FFF;
+ 		color: #FFF;
+ 	}
+ }
+
+.london {
+	position: relative;
+
+ .img-social-fb, .img-social-insta {
+ 	width: 35px;
+     height: 50px;
+     position: absolute;
+     bottom: 20px;
+     top: inherit;
+ }
+
+ .img-social-fb {
+     right: 30%;
+ }
+
+ .img-social-insta {
+     left: 30%;
+ }
+
+}
+
+.wpcf7 .cf7sr-g-recaptcha {
+	div {
+		width: 100% !important;
+	}
+}

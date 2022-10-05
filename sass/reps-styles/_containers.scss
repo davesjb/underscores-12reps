@@ -1,0 +1,144 @@
+/* ======================================
+
+	STRUCTURE
+
+ ========================================= */
+.section {
+	width: 100%;
+	min-height: 200px;
+	padding-top: $vertical-spacing-small;
+	padding-bottom: $vertical-spacing-small;
+	display: inline-block;
+	position: relative;
+	@include bp(768px){
+		padding-top: $vertical-spacing-large;
+		padding-bottom: $vertical-spacing-large;
+	}
+}
+
+.section-no {
+	width: 100%;
+	min-height: 200px;
+	padding-top: $vertical-spacing-small;
+	padding-bottom: $vertical-spacing-small;
+	display: inline-block;
+	position: relative;
+	@include bp(768px){
+		padding-top: 0;
+		padding-bottom: 0;
+		display: flex;
+	}
+}
+
+.section-border {
+	border-top: solid 20px $light-grey-box;
+}
+
+.container-outer {
+	width: 100%;
+	height: 100%;
+	max-width: $wide-screen-limit;
+	margin: 0 auto;
+}
+
+.container-header {
+	width: 100%;
+	min-height: 50px;
+	max-width: $container-width-header;
+	padding: 0 20px;
+	margin: 0 auto;
+	@include bp(1000px){
+		padding: 0;
+	}
+}
+
+.container {
+	width: 100%;
+	min-height: 50px;
+	max-width: $container-width;
+	padding: 0 20px;
+	margin: 0 auto;
+	@include bp(1000px){
+		padding: 0;
+	}
+}
+
+.content {
+	width: 100%;
+	display: inline-block;
+	@include bp(768px){
+		padding: 20px;
+	}
+}
+
+.content-flex {
+	width: 100%;
+	@include bp(768px){
+		padding: 0;
+	}
+}
+
+.left-content {
+	width: 100%;
+	display: inline-block;
+	@include bp(768px){
+		width: 50%;
+	}
+}
+
+.right-content {
+	width: 100%;
+	display: inline-block;
+	@include bp(768px){
+		width: 50%;
+	}
+}
+
+.left-container {
+	width: 100%;
+	display: inline-block;
+	@include bp(768px) {
+		width: 50%;
+	}
+}
+
+.right-container {
+	width: 100%;
+	display: inline-block;
+	@include bp(768px) {
+		width: 50%;
+		float: right;
+	}
+}
+
+.no-top-padding {
+	@include bp(768px){
+		padding-top: 0;
+		.content {
+			padding-top: 0;
+		}
+	}
+}
+
+.no-bottom-padding {
+	@include bp(768px){
+		padding-bottom: 0;
+		.content {
+			padding-bottom: 0;
+		}
+	}
+}
+
+.entry-container {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    * {
+    	text-align: center;
+    }
+    @include bp(768px){
+    	padding: 60px 20px 60px;
+    }
+}

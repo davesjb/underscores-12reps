@@ -1,0 +1,93 @@
+/* ======================================
+
+	THEME COLORS
+
+ ========================================= */
+ .bg-primary {
+ 	background-color: $white;
+ }
+
+ @include bp(1300px){
+	.bg-primary {
+		background-color: $turq;
+	}
+	.bg-wall {
+		background-image: url(images/background.jpg);
+		background-position: 50% 50%;
+		background-size: cover;
+	}
+}
+/* Level 1 */
+.bg-turq {
+	background-color: $turq;
+}
+
+/* Level 2 */
+.bg-blue, .bg-secondary {
+	background-color: $blue;
+	h2, h3, p {
+		color: $white;
+	}
+}
+
+/* Level 3 */
+.bg-light {
+	background-color: $white;
+	@include bp(768px){
+		background-color: $light-grey-box;
+	}
+	
+	h2, h3, p {
+		color: $blue;
+	}
+}
+
+/* Level 4 */
+.bg-white {
+	background-color: $white;
+	h2, h3, p {
+		color: $blue;
+	}
+}
+
+/* Addtional */
+.bg-light-blue {
+	background-color: $light-blue;
+}
+
+.bg-red {
+	background-color: $red;
+}
+
+/* None */
+.no-bg {
+	background-color: transparent;
+}
+
+.light-blue-text {
+	color: $light-blue;
+	p {
+		color: $light-blue;
+	}
+}
+
+.red-text {
+	color: $red;
+	h2, h3, p {
+		color: $red;
+	}
+}
+
+.turquoise-text {
+	color: $turquoise;
+	h2, h3, p {
+		color: $turquoise;
+	}
+}
+
+.blue-text {
+	color: $blue;
+	h2, h3, p {
+		color: $blue;
+	}
+}

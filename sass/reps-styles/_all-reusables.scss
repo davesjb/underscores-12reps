@@ -1,0 +1,169 @@
+/* ======================================
+
+	REUSABLES
+
+ ========================================= */
+
+ /* body {
+  	&:not(.page-template-landing){ 	
+ */
+
+.desktop-only {
+	display: none;
+	@include bp(560px){
+		display: block;
+	}
+}
+
+.hide-mobile {
+	display: none;
+	@include bp(600px){
+		display: block;
+	}
+}
+
+.text-content {
+	&.left-content {
+		padding: 30px 0;
+		@include bp(560px){
+			padding-right: 40px;
+		}
+	}
+	&.right-content {
+		padding: 30px 0;
+		@include bp(560px){
+			padding-left: 40px;
+		}
+	}
+}
+
+.banner {
+	transition: .3s ease-out all;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.border {
+	border: solid 1px $black;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.relative {
+	position: relative;
+}
+
+.flex {
+	display: block;
+	@include bp(768px){
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox; 
+		display: -webkit-flex;
+		display: flex;
+	}
+}
+
+.flex-columns {
+	@include bp(768px){
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
+}
+
+.column {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.column {
+	width: 100%;
+	@include bp(768px){
+		width: 50%;
+		padding: 0 20px;
+	}
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.center-div {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+} 
+
+.image-bg {
+	min-height: 430px;
+    background-position: 50% 0%;
+}
+
+.image-bg-adjust {
+	min-height: 200px;
+    background-position: 27% 50%;
+}
+
+.image-bg-center { 
+	min-height: 200px;
+    background-position: 50% 50%;
+}
+
+.image-bg-load, .image-bg-section-scroll-load {
+	opacity: 0;
+}
+
+.image-bg-loadtop {
+	opacity: 0;
+	animation: fadein 4s;
+	animation-fill-mode: forwards;
+}
+
+.sticky-active .image-bg-load {
+	animation: fadein 4s;
+	animation-fill-mode: forwards;
+}
+
+section.in-view .image-bg-section-scroll-load {
+	animation: fadein 4s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+.hide-mobile, .hide, .hide-mobile-natural {
+	display: none;
+}
+
+@include bp(600px){
+	.hide-mobile {
+		display: block;
+	}
+	.hide-tablet {
+		display: none;
+	}
+}
+@include bp(700px){
+	.hide-mobile-natural {
+		display: block;
+	}
+}
+@include bp(1000px){
+	.hide-mobile, .hide-tablet {
+		display: block;
+	}
+	.hide-desktop {
+		display: none;
+	}
+}

@@ -1,0 +1,293 @@
+/* ======================================
+
+	BASE PARTIAL
+
+ ========================================= */
+
+html, body {
+	height:100%; 
+}
+
+html {
+	font-size: 62.5%; 
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: $body-font;
+	line-height: 1.6;
+	margin: 0;
+	padding: 0;
+	background-color: $white; 
+	position: relative;
+	top: 0;
+	transition: 0.3s ease-out all;
+	&.sticky-active {
+		top: 0;
+		@include bp(720px){
+			top: 73px;
+		}
+	}
+	&.remove-nav {
+		top: 0 !important;
+		.sticky-nav {
+			display: none;
+		}
+	}
+}
+
+body {
+	&:not(.home-page){
+		/* Not */
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+input[disabled="disabled"],
+.disabled {
+	cursor: default;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	transition: 1s ease-out all;
+	text-transform: none;
+	margin-top: 0;
+	margin-bottom: 40px;
+	color: $light-text;
+	font-family: $title-font;
+	line-height: 1.4;
+	font-weight: 900;
+	font-family: 'Teko', sans-serif;
+}
+
+h1 {
+	font-size: 4.5rem;
+	text-align: center;
+}
+
+h2 {
+	font-size: 3rem;
+	text-align: center;
+	position: relative;
+	.in-view & {
+		&:after {
+			content: "";
+			background-color: $turquoise;
+		    // width: 100%;
+		    max-width: 200px;
+		    height: 1px;
+		    position: absolute;
+		    bottom: -10px;
+		    left: 50%;
+		    transform: translate(-50%);
+		    animation: animateLineOut 3s;
+		    animation-fill-mode: forwards;
+		}
+	}
+
+	.bg-blue & {
+		&:after {
+			background-color: $red;
+		}
+	}
+
+	.section-contact & {
+		&:after {
+			background-color: $light-blue;
+		}
+	}
+	@include bp(768px){ 
+		font-size: 4rem;
+	}
+}
+
+.footer h3 {
+	position: relative;
+	.in-view & {
+		&:after {
+			content: "";
+			background-color: $red;
+			max-width: 200px;
+		    height: 1px;
+		    position: absolute;
+		    bottom: -10px;
+		    left: 0;
+		    animation: animateLine 1s;
+		    animation-fill-mode: forwards;
+		}
+	}
+}
+
+.page-template-services {
+	.services-section {
+		h2, h3 {
+			&:before, &:after {
+				content: "";
+				display: none;
+			}
+		}
+	}
+}
+
+
+h3, h4 {
+	font-size: 2.4rem;
+	@include bp(768px){ 
+		font-size: 3rem;
+	}
+}
+
+.title-container {
+	width: 80%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-bottom: 0;
+	@include bp(768px){ 
+		font-size: 3rem;
+		margin-top: 40px; 
+	}
+	h1 {
+		display: block;
+		text-align: center;
+		font-size: 2.8rem;
+		margin-bottom: 0;
+		@include bp(346px){
+			font-size: 3.2rem;
+		}
+		@include bp(800px){
+			font-size: 4.6rem;
+		}
+		@include bp(1260px){
+			font-size: 5.5rem;
+		}
+	}
+	h2 {
+		text-align: center;
+		font-size: 2.2rem;
+		font-style: italic;
+		&:after {
+			content: "";
+			display: none;
+		}
+
+		@include bp(346px){
+			font-size: 2.6rem;
+		}
+		@include bp(800px){
+			font-size: 2.8rem;
+		}
+		@include bp(1260px){
+			font-size: 3rem;
+		}
+	}
+}
+
+strong {
+	color: $white;
+	font-weight: bold;
+}
+
+p {
+	font-size: 1.8rem;
+	color: $white; 
+	line-height: 1.4;
+	margin-bottom: 20px;
+}
+
+.dark-text-section {
+	h1,
+	h2,
+	h3,
+	p {
+		color: $dark-text;
+	}
+}
+
+p + h2, p + h3, p + .button {
+	margin-top: 30px;
+}
+
+ul {
+	margin-left: 0;
+	padding-left: 20px;
+}
+
+h1::selection,
+h2::selection,
+h3::selection,
+p::selection,
+q::selection {
+	background: $blue;
+	color: $red;
+}
+
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+p::-moz-selection,
+q::-moz-selection {
+	background: $blue;
+	color: $red;
+}
+
+::-webkit-input-placeholder {
+	color: $dark-text;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: $dark-text;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: $dark-text;
+}
+
+:-ms-input-placeholder {
+	color: $dark-text;
+}
+
+.content ul li, .left-content ul li, .right-content ul li {
+	font-size: 1.8rem;
+	color: $dark-text; 
+	line-height: 1.4;
+	margin-bottom: 10px;
+	list-style: none;
+    position: relative;
+    &:after {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $bullet !important;
+        position: absolute;
+        left: -17px;
+           top: 10px;
+        #purple-theme & {
+            background-color: $bullet !important;
+        }
+        #red-theme & {
+            background-color: $bullet !important;
+        }
+    }
+	@include bp(768px){ 
+		font-size: 2rem;
+	}
+	&.lead-paragraph {
+		font-size: 2.4rem;
+	}
+}
+
+.content .social ul li {
+	&:after {
+		content: "";
+		display: none;
+	}
+}

@@ -1,0 +1,36 @@
+/* ======================================
+
+	PRICES
+
+ ========================================= */
+
+ .page-template-prices {
+ 	.grid-row {
+ 		.grid-item {
+ 			background-color: $blue;
+ 			border: 10px solid $turq;
+ 			padding: 20px 40px;
+ 			.peak-price {
+ 				font-size: 7rem;
+ 				margin-top: 0;
+ 				margin-bottom: 0;
+ 				padding-right: 20px;
+ 				span {
+ 					font-size: 2rem;
+ 					text-transform: uppercase;
+ 				}
+ 			}
+ 			.off-peak {
+ 				color: $red;
+ 				font-size: 7rem;
+ 				text-transform: uppercase;
+ 				span {
+ 					font-size: 2rem;
+ 				}
+ 			}
+ 			h3, h4, p {
+ 				text-align: center;
+ 			}
+ 		}
+ 	}
+ }

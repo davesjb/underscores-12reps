@@ -1,0 +1,389 @@
+/* ======================================
+
+	HEADER NAV
+
+ ========================================= */
+
+.main-nav {
+	width: 100%;
+	height: 140px;
+	padding: 20px;
+	float: left;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(10, 43, 62, 0);
+	transition: .3s ease-out all;
+	z-index: 99;
+}
+
+.sub {
+	width: 80px;
+	float: left;
+	left: 0;
+	transition: .3s ease-out all;
+	position: relative;
+	.mobile-open & {
+		left: 50%;
+		transform: translateX(-50%);
+		float: none;
+	}
+	svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	figure {
+		img {
+			display: block;
+			/*margin: 0 auto;*/
+			width: 80px;
+			transition: 1s ease-out all;
+			@include bp(346px){
+				width: 90px;
+			}
+			@include bp(800px){
+				width: 110px;
+			}
+			@include bp(1260px){
+				width: 129px;
+			}
+		}
+	}
+}
+
+/*Nav*/
+.menu-main-nav-container {
+	width: 100%;
+	height: 25px;
+	max-width: 402px;
+	// max-width: fit-content;
+	background-color: rgba(10, 43, 62, 0.0);
+	transition: 0.5s ease-out all;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    .mobile-open & {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.sticky-nav.nav-active {
+	position: fixed;
+	background-color: rgba(10, 43, 62, 0.9);
+	height: 73px;
+	.sub {
+		width: 50px;
+		top: -27px;
+	}
+	.menu-main-nav-container {
+		top: 22px;
+	}
+}
+
+.nav-up {
+	top: -73px;
+}
+
+.nav-down {
+	
+}
+
+ul#main-nav {
+	width: 100%;
+	max-width: 570px;
+	margin: 0;
+	padding: 0;
+	display: none;
+	justify-content: space-evenly;
+	opacity: 1;
+	list-style: none;
+	transition: 0.3s ease-out all;
+/*	> div {
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+	}*/
+	li {
+		float: left;
+		margin-right: 30px;
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+			color: $white;
+			transition: 0.3s ease-out all;
+			position: relative;
+			&:after {
+				content: "";
+				background-color: $red;
+			    width: 0;
+			    height: 1px;
+			    position: absolute;
+			    top: 27px;
+			    left: 0;
+			}
+			&:hover {
+				&:after {
+					content: "";
+					background-color: $red;
+				    width: 0%;
+				    max-width: 200px;
+				    height: 1px;
+				    position: absolute;
+				    top: 27px;
+				    left: 0;
+				    animation: animateLine 0.5s;
+				    animation-fill-mode: forwards;
+				}
+			}
+		}
+		&.current-menu-item {
+
+			a {
+				position: relative;
+				&:after {
+					content: "";
+					background-color: $red;
+				    width: 0%;
+				    max-width: 200px;
+				    height: 1px;
+				    position: absolute;
+				    top: 27px;
+				    left: 0;
+				    animation: animateLine 1s;
+				    animation-fill-mode: forwards;
+				}
+			}
+		}
+		.mobile-open & {
+			a {	
+				&:before, &:after {
+					display: none;
+				}
+			}
+		}
+	}
+	
+	@media screen and (min-height: 655px) and (min-width: 720px) {
+		display: flex;
+		opacity: 1;
+	}
+	@media screen and (min-width: 720px) {
+		
+		.sticky-active & {
+			display: flex;
+			opacity: 1;
+		}
+	}
+}
+
+#burger {
+	width: 26px;
+	height: 16px;
+	display: block;
+	position: absolute;
+	top: 70px;
+	right: 19px;
+	z-index: 200; 
+	opacity: 1;
+	transition: 0.3s linear all;
+	// @include bp(720px){
+	// 	display: none;
+	// }
+	@media screen and (min-height: 655px) and (min-width: 720px) {
+		display: none;
+	}
+	.sticky-active & {
+		top: 31px;
+	}
+	span {
+		width: 100%;
+		height: 2px;
+		display: block;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		background-color: $white;
+		transition: 0.3s linear all;
+		&:before,
+		&:after {
+			content: "";
+			width: 100%;
+			height: 2px;
+			background-color: $white;
+			position: absolute;
+			transition: 0.3s linear all;
+		}
+		&:before {
+			top: -7px;
+		}
+		&:after {
+			top: 7px;
+		}
+	}
+	&:hover {
+		cursor: pointer;
+		opacity: 1;
+		span {
+			background-color: $red;
+			&:before,
+			&:after {
+				content: "";
+				background-color: $red;
+			}
+		}
+	}
+	&:focus {
+		color: $white;
+		outline: none;
+		cursor: pointer;
+	}
+}
+
+#mobile-nav {
+	width: 0%;
+    height: 100%;
+	position: fixed;
+	background-color: rgba(255, 255, 255, 0.4);
+	right: 0;
+	z-index: 9999;
+	transition: 0.3s ease-out all;
+	ul {
+		display: block;
+		width: 100%;
+		max-width: 0%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		position: relative;
+		top: 10px;
+		left: 0;
+		overflow: hidden;
+
+		li {
+			padding: 2px 0;
+			position: relative;
+			width: 100%;
+			display: block;
+			margin: 0 auto 10px;
+			font-family: $title-font;
+			line-height: 1.4;
+			font-size: 2.8rem;
+			&:last-child {
+				border-bottom: none;
+			}
+			a, span {
+				display: block;
+				padding: 12px 0;
+				color: $white;
+				text-align: center;
+				font-size: 2.8rem;
+				&:hover {
+					cursor: pointer;
+					transition: 0.3s linear all;
+					color: $red;
+				}
+			}
+			&:after {
+			    content: "";
+			    position: absolute;
+			    bottom: 0;
+			    left: 50%;
+			    transform: translateX(-50%);
+			    width: 40px;
+			    border-bottom: 1px solid #efefef;
+			    pointer-events: none;
+			}
+			&:last-child {
+				&:after {
+					content: "";
+					display: none;
+				}
+			}
+			
+			> ul {
+				top: 0;
+				max-width: 100%;
+				max-height: 0;
+
+				> li {
+					padding: 2px 0;
+					border-bottom: #c78485 1px solid;
+					
+					> a {
+						margin-left: 40px;
+					}
+				}
+			}
+			&.active {
+				border-bottom: none;
+				&:after {
+					top: 26px;
+				    transform: rotate(180deg);
+				}
+				> ul {
+					max-height: 400px;
+				}
+			}
+		}
+	}
+}
+
+.mobile-open {
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+
+
+	/*.container-outer {
+		float: left;
+	}*/
+	#burger {
+		span {
+			background-color: rgba(0, 0, 0, 0);
+			&:before {
+				top: 0;
+				transform: rotate(45deg);
+			}
+			&:after {
+				top: 0;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	#mobile-nav {
+		width: 100%;
+    	height: 100%;
+		display: block;
+		background-color: rgba(0, 159, 177, 0.9);
+		z-index: 80;
+		// @include bp(720px){
+		// 	width: 0%;
+		// }
+		ul {
+			max-width: 100%;
+			top: 85px;
+			li {
+				a, span {
+				
+				}
+				> ul {
+					max-width: 100%;
+					> li {
+						> a {
+							
+						}
+					}
+				}
+			}
+		}
+		/* @include bp(600px){
+			display: none;
+		} */
+	}
+}
